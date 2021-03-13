@@ -1,9 +1,10 @@
 ---
 title: Git --- 基础
-date: 2021-03-10 23:16:21
 categories:
-- 工具
-- Git
+  - 工具
+  - Git
+abbrlink: 28b33e30
+date: 2021-03-10 23:16:21
 tags:
 ---
 

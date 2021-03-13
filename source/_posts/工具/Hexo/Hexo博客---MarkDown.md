@@ -1,9 +1,10 @@
 ---
 title: Hexo博客 --- Markdown
-date: 2021-03-07 23:14:11
 categories:
-- 工具
-- Hexo
+  - 工具
+  - Hexo
+abbrlink: fcf4f4e7
+date: 2021-03-07 23:14:11
 tags:
 ---
 

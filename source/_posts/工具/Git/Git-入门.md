@@ -1,9 +1,10 @@
 ---
 title: Git --- 入门
-date: 2021-03-08 21:38:39
 categories:
-- 工具
-- Git
+  - 工具
+  - Git
+abbrlink: bcaee25f
+date: 2021-03-08 21:38:39
 tags:
 ---
 

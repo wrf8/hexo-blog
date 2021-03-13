@@ -1,9 +1,10 @@
 ---
 title: Hexo博客 --- 写文章
-date: 2021-03-06 19:03:50
 categories:
-- 工具
-- Hexo
+  - 工具
+  - Hexo
+abbrlink: 2507c73c
+date: 2021-03-06 19:03:50
 tags:
 ---
 
@@ -85,6 +86,30 @@ $ cnpm install hexo-asset-image
 ```
 #### 3.1.2 CDN
 将图片上传到一些免费的`CDN`服务中。比如 `Cloudinary` 提供的图片CDN服务，在 `Cloudinary` 中上传图片后，会生成对应的 `url`地址，将地址直接拿来引用即可。
+
+### 3.2 生成永久文章链接
+hexo博客文章链接默认的生成规则是：`:year/:month/:day/:title`，是按照年、月、日、标题来生成的。比如：
+![image](/images/工具/Hexo/hexo_article_link.png)
+这样，如果文章标题是中文的话，URL链接是也会是中文。而且跳转站内文章填写链接的时候也不方便，修改文章标题后url就变了，以前的文章地址变成了404，就很不灵活，容易出错，所以生成唯一不变的URL链接很有必要。
+
+#### 3.2.1 安装 hexo-abbrlink 插件
+安装命令：
+```
+npm install hexo-abbrlink --save
+```
+
+#### 3.2.2 配置
+修改根目录配置文件 `config.yml`，改为：
+```
+# permalink: :year/:month/:day/:title/
+permalink: posts/:abbrlink.html  #此处可以自己设置，最终链接格式为：https://博客站点/permalink
+abbrlink:
+    alg: crc32   #算法： crc16(default) and crc32
+    rep: hex     #进制： dec(default) and hex
+```
+生成完后，原 `md文件` 的 `Front-matter` 内会增加 `abbrlink` 字段，值为生成的`ID`。这个字段确保了在我们修改了博客标题title或创建日期date字段之后而不会改变链接地址。
+
+
 
 
 

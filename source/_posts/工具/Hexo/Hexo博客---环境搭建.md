@@ -1,9 +1,10 @@
 ---
 title: Hexo博客 --- 环境搭建
-date: 2021-03-06 19:02:20
 categories:
-- 工具
-- Hexo
+  - 工具
+  - Hexo
+abbrlink: 5bd46458
+date: 2021-03-06 19:02:20
 ---
 
 ## 1.关于博客
